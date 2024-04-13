@@ -1,0 +1,145 @@
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 border-danger">
+
+                <div class="list-group mt-4">
+                    <div class="list-group-item list-group-item-action bg-secondary text-light">BỘ LỌC</div>
+                    <div class="bg-white">
+                        <div class="section-detail">
+                            <form method="POST" action="">
+                                <table class="table table-active">
+                                    <thead>
+                                        <tr>
+                                            <td class="table-primary" colspan="2">Giá</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="price" value="1"></td>
+                                            <td>Dưới 1.000.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="price" value="2"></td>
+                                            <td>1.000.000đ - 5.000.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="price" value="3"></td>
+                                            <td>5.000.000đ - 15.000.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="price" value="4"></td>
+                                            <td>15.000.000đ - 25.000.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="price" value="5"></td>
+                                            <td>Trên 25.000.000đ</td>
+                                        </tr>
+                                    </tbody>
+                                    </tbody>
+                                </table>
+                                <table class="table table-active">
+                                    <thead>
+                                        <tr>
+                                            <td class="table-primary" colspan="2">Loại</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="category" value="1"></td>
+                                            <td>ÁO</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="category" value="2"></td>
+                                            <td>QUẦN</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="category" value="3"></td>
+                                            <td>GIÀY</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <input class="btn btn-primary btn-sm btn-block" type="submit" name="select_detail"
+                                    value="Lọc">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 border-danger">
+                <div class="row d-flex">
+                    <div class="col-md-6 mt-4">
+                        <h3 class="font-weight-normal">Sản phẩm</h3>
+                        <p class="">Hiển thị 45 trên 50 sản phẩm</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="float-right mt-4"> 
+                            <form method="POST" action="" class="d-flex">
+                                <select name="select" class="form-select">
+                                    <option value="0">Sắp xếp</option>
+                                    <option value="1">Từ A-Z</option>
+                                    <option value="2">Từ Z-A</option>
+                                    <option value="3">Giá cao xuống thấp</option>
+                                    <option value="3">Giá thấp lên cao</option>
+                                </select>
+                                <button class="btn btn-secondary" type="submit">Lọc</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="container" id="product-cards">
+                            <div class="row" style="margin-top: 50px;">
+                                <div class="col-6 py- py-md-0 my-3" ng-repeat="(index, value) in listProducts">
+                                    <div class="card">
+                                        <img src="{{value.image}}" alt="">
+                                        <div class="overlay">
+                                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img
+                                                        src="/lib/images/add carts.png" alt=""
+                                                        width="30px"></i></button>
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#!/detail/{{value.id}}" class="text-decoration-none">
+                                                <h3 class="text-center">{{value.name}}</h3>
+                                            </a>
+                                            <h4 class="text-center">{{value.price | number:0 }} VNĐ</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item ">
+                                <a href="" class="page-link">&laquo;</a>
+                            </li>
+                            <li class="page-item ">
+                                <a href="" class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="" class="page-link">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="" class="page-link">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="" class="page-link">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "id": "911f",
+      "name": "Lĩnh Vũ Hồng adxsa",
+      "email": "superadmin@example.com",
+      "password": "1234567",
+      "address": "Hà Nội",
+      "phone": 393915663,
+      "image": "/storage/photos/1/Screenshot (357).png",
+      "role": "Phòng kinh doanh"
+    },
+    {
+      "id": "7d93",
+      "name": "Lĩnh Vũ Hồng",
+      "email": "superadmin@example.com",
+      "password": "1231",
+      "address": "Hà Nội",
+      "phone": 393915663,
+      "image": "/storage/photos/1/Screenshot (357).png",
+      "role": "Phòng hành chính"
+    },
+    {
+      "id": "bfa5",
+      "name": "Lĩnh Vũ Hồng",
+      "email": "superadmin@example.com",
+      "password": "1234451231",
+      "address": "Hà Nội",
+      "phone": 393915663,
+      "image": "/storage/photos/1/Screenshot (357).png",
+      "role": "Phòng kinh doanh"
+    }
+  ],
+  "products": [
+    {
+      "id": "f7a3",
+      "name": "Áo thun nữ",
+      "price": "46990000",
+      "image": "http://127.0.0.1:3000/lib/images/shirt4.png",
+      "quantity": 100,
+      "description": "SẢN chất lượng cao"
+    },
+    {
+      "id": "6bf8",
+      "name": "Quần nam châu âu",
+      "price": "200000",
+      "image": "http://127.0.0.1:3000/lib/images/pant4.png",
+      "quantity": 100,
+      "description": "Sản phân ttos"
+    },
+    {
+      "id": "282b",
+      "name": "Quần jearn",
+      "price": "46990000",
+      "image": "http://127.0.0.1:3000/lib/images/pant1.png",
+      "quantity": 100,
+      "description": "Colormate Art & Craft trang chuyên cung cấp màu vẽ, họa cụ, đồ thủ công cao cấp, chất lượng. Cần tư vấn về sản phẩm và chính sách sỉ liên hệ HOTLINE ạ."
+    },
+    {
+      "id": "b1fb",
+      "name": "Quần short",
+      "price": "46990000",
+      "image": "http://127.0.0.1:3000/lib/images/pant2.png",
+      "quantity": 100,
+      "description": "Sản phẩm tốt"
+    },
+    {
+      "id": "0903",
+      "name": "Quần quảng châu",
+      "price": "46990000",
+      "image": "http://127.0.0.1:3000/lib/images/h1.png",
+      "quantity": 100,
+      "description": "Sản phẩm tốt chất lượng cao"
+    }
+  ],
+  "customers": [
+    {
+      "id": "ed36",
+      "name": "Lĩnh Vũ Hồng",
+      "email": "superadmin1@example.com",
+      "password": "1234567",
+      "address": "Hà Nội",
+      "phone": 393915663,
+      "image": "http://127.0.0.1:3000/lib/images/shirt4.png"
+    },
+    {
+      "id": "eee0",
+      "name": "Vũ Việt Hoàng",
+      "email": "superadmin@example.com",
+      "password": "1234567",
+      "address": "Hà Nội",
+      "phone": 393915663,
+      "image": "http://127.0.0.1:3000/lib/images/shirt3.png"
+    }
+  ],
+  "posts": [
+    {
+      "id": "0734",
+      "title": "sdasd 123123",
+      "content": "sad 13123sadasd",
+      "image": "http://127.0.0.1:3000/lib/images/img1.png"
+    },
+    {
+      "id": "3c3e",
+      "title": "Bài viết 2",
+      "content": "Khai tại tòa, cựu thiếu tướng Đỗ Hữu Ca, cựu Giám đốc Công an Hải Phòng, khai 35 tỉ đồng nhận của vợ chồng 'ông trùm' Trương Xuân Đước để chạy án, ông đã cất trong phòng ngủ để tiện coi giữ.\nChiều 10.4, TAND tỉnh Quảng Ninh tiếp tục xét xử sơ thẩm vụ án mua bán hóa đơn, đưa - nhận hối lộ, lừa đảo chiếm đoạt tài sản. Đáng chú ý là lời khai của ông Đỗ Hữu Ca về số tiền nhận của \"ông trùm\" hóa đơn Trương Xuân Đước.\n\nÔng Đỗ Hữu Ca khai cất 35 tỉ đồng trong phòng ngủ để... coi giữ- Ảnh 1.\nÔng Đỗ Hữu Ca thừa nhận 4 lần nhận 35 tỉ đồng từ vợ chồng ông Trương Xuân Đước\n\nLÃ NGHĨA HIẾU\n\nÔng Đỗ Hữu Ca khai lên kế hoạch để đưa 'ông trùm' hóa đơn đi tự thú\nCụ thể, tại phiên toà, cựu Giám đốc Công an Hải Phòng Đỗ Hữu Ca thừa nhận 4 lần vợ ông Đước là bà Nguyễn Thị Ngọc Anh đem tiền tới nhà mình với tổng số tiền là 35 tỉ đồng là đúng như trong cáo trạng nêu. Sau đó, ông Ca chủ động đem tới cơ quan công an giao nộp để mong nhận được khoan hồng.\n\nCũng theo ông Ca, bản thân từ trước không quan tâm nhiều đến việc làm ăn của ông Đước nhưng bà Ngọc Anh tới nhà mình cầu cứu thì rất lo lắng và suy nghĩ rằng phải cố gắng cứu \"ông trùm\" mua bán hóa đơn. Thời điểm này, ông Ca coi ông Đước như em ruột trong nhà.\n\nCũng theo ông Ca, bà Ngọc Anh đã nhiều lần tìm tới, thậm chí quỳ giữa nhà để xin cứu ông Đước.\n\nCựu Giám đốc Công an Hải Phòng Đỗ Hữu Ca tóc bạc trắng hầu tòa\n\n\"Tôi muốn cứu Đước trên cơ sở quy định của pháp luật, nguyên tắc đã xâm phạm tiền của Nhà nước thì phải hoàn trả và bồi hoàn thiệt hại để nhận sự khoan hồng của pháp luật. Tôi không chấp nhận việc Đước đem tiền đi chạy tội. Tuy nhiên, lúc đó tôi không hiểu tội của Đước như nào và rất mong được gặp Đước nhưng không được\", ông Ca khai trước tòa.\n\nTrong 2 lần gặp trực tiếp, ông Ca thuyết phục ông Đước về nhà mình để nắm rõ tình hình các mối quan hệ, các đơn vị liên quan đến số tiền thu lợi bất chính để trả lại. Nếu hoàn thành thì chính ông Ca sẽ đưa ông Đước tới cơ quan công an để tự thú.\n\nTuy kế hoạch đã lên sẵn nhưng không thực hiện được do ông Ca chờ mãi không thấy ông Đước về, đồng thời lúc đó ông Ca bị bệnh phải điều trị.\n\nVề vấn đề trích 10% doanh thu của công ty mua bán hóa đơn giả ở Quảng Ninh, ông Ca nói rằng đã nhiều lần hỏi bà Ngọc Anh về việc làm ăn và được cho biết, ông Đước có một công ty ở Quảng Ninh chuyên mua bán hóa đơn giả.\n\nCông ty này có doanh thu 200 tỉ đồng và phải trích lại 10% là 20 tỉ đồng. Ông Ca nói với bà Ngọc Anh rằng phải bỏ 20 tỉ đồng này ra để khắc phục hậu quả và chuẩn bị thêm một số tiền nữa để đề phòng thiếu.\n\n\"Tôi không hề nói với Ngọc Anh là đem 20 tỉ đồng để chạy tội cho Đước, và tôi cũng không nói mang số tiền đó tới nhà tôi. Đây là một sự hiểu nhầm và ngộ nhận rất lớn từ phía Ngọc Anh\", ông Ca nói.\n\nXin chịu trách nhiệm về số tiền 35 tỉ đồng\nTrong việc nhận và giữ tiền của bà Ngọc Anh, ông Ca cho rằng vợ chồng ông Trương Xuân Đước tự ý vận chuyển tới nhà ông Ca lượng tiền rất lớn nhưng không thông báo trước khiến ông Ca bị động, bất ngờ.\n\nÔng Đỗ Hữu Ca khai cất 35 tỉ đồng trong phòng ngủ để... coi giữ- Ảnh 2.\nCựu thiếu tướng Đỗ Hữu Ca ngồi nghe đọc cáo trạng luận tội\n\nLÃ NGHĨA HIẾU\n\nÔng Ca khai không có nhu cầu nhận số tiền này, các lần chuyển của bà Ngọc Anh không nói rõ tiền này là gì, không có kiểm đếm, giao nhận hay giấy tờ sổ sách mà chỉ vội vàng nói là: \"Anh cất tiền đi cho em\".\n\nCũng theo ông Ca, lúc nhận tiền, ông Ca chỉ nghĩ khi đó ông Đước đang trốn, nhà heo hút chỉ có bà Ngọc Anh và con nhỏ ở nhà nên đem tiền tới nhà ông Ca để gửi.\n\n\"Tôi rất bực mình vì sự đường đột của Ngọc Anh, nhưng lúc đó nghĩ mình phải giúp Đước trong lúc khó khăn nên không nói gì và để Ngọc Anh đem tiền vào nhà mình. Những lần sau Ngọc Anh đem tiền tới tôi cũng chỉ nghĩ đó là tiền để khắc phục hậu quả nên đồng ý mang vào nhà chứ không biết tiền đó mang đến nhờ mình chạy tội. Đó là cái sai lớn nhất của tôi\", ông Ca nói.\n\nSau khi 4 lần nhận tiền từ vợ chồn",
+      "image": "http://127.0.0.1:3000/lib/images/img2.png"
+    },
+    {
+      "id": "0560",
+      "title": "Arsenal đã trả giá cho sự ''hừng'' quá mức",
+      "content": "Tình huống Bayern quân bình tỷ số xuất phát từ một đường chuyền hớ hênh nơi phần sân nhà của Gabriel Magalhaes cho Kiwior. Và khi đội hình Arsenal đang dâng cao, họ không có được sự hỗ trợ một cách kịp thời nhờ đó, đội khách dễ dàng triển khai một đợt phát động phản công sở trường để mang về bàn gỡ.\n\nTình huống dẫn đến bàn nâng tỷ số lên 2-1 của Bayern cũng đến từ một tình huống khá tương tự. Khác biệt lớn nhất là thay vì đường chuyền thiếu chính xác, chính hậu vệ Arsenal đã để đối thủ cướp được bóng mở ra màn solo ngoạn mục của Leroy Sane, buộc cho William Saliba phải phạm lỗi trong vòng cấm.\n\nNHM không còn chứng kiến một Pháo thủ xù xì, gai góc như trong trận gặp Porto hay Manchester City. Họ dường như đánh mất chính mình khi hầu hết các ngôi sao đều chơi dưới sức, trong khi Bayern lại tỏ ra quá già rơ dù đang rơi vào cơn khủng hoảng trầm trọng.",
+      "image": "https://media.bongda.com.vn/files/truong.tran/2024/04/10/gettyimages-2148052243-612x612-0301.jpg"
+    },
+    {
+      "id": "22d5",
+      "title": "Erling Haaland bực tức khi bị trọng tài tát vào mặt",
+      "content": "Trong lúc cao hứng, ông Francois Letexier đã vung tay nhưng không ngờ Haaland có mặt phía sau. Điều đó dẫn tới việc trọng tài người Pháp đã vô tình tát vào mặt tiền đạo của Man City. Haaland điên tiết, vung tay rồi quay lại nhìn trọng tài.\n\nSau đó, trọng tài Francois Letexier đã chủ động xin lỗi Haaland nhưng tiền đạo người Na Uy đã thể hiện sự không hài lòng. Tiền đạo này đã đi thẳng vào đường hầm sân Bernabeu.\n\nTrước khi dính đòn từ trọng tài, Haaland cũng bực bội vì màn trình diễn mờ nhạt trong hiệp 1. Ở phút 45 đầu tiên, tiền đạo Bắc Âu chỉ chạm bóng đúng 4 lần và thực hiện 1 cú sút trúng đích nhưng không làm khó được thủ thành Lunin của Real Madrid.",
+      "image": "https://cdnphoto.dantri.com.vn/WrhG_IaHgKLwMAlRDewsqoSLKDg=/thumb_w/1020/2024/04/10/fotojet-2024-04-09t224704260-fotor-20240409224858-780x470-1712712589860995320362-1712727540391.jpg"
+    }
+  ]
+}

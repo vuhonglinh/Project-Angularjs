@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/angular/angular-csp.css">
+</head>
+
+<body ng-app="myApp" class="bg-secondary">
+    <div ng-controller="myController" class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-4  border shadow-lg p-5 mt-5 bg-white">
+                <h1 class="text-center">Đăng ký</h1>
+                <div class="form-group my-3">
+                    <label for="name" class="form-label">Họ và tên</label>
+                    <input type="text" class="form-control" name="name" id="name" ng-model="data.name">
+                    <span class="text-danger" ng-show="validate.name">Vui lòng nhập tên đăng nhập</span>
+                </div>
+                <div class="form-group my-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" ng-model="data.email">
+                    <span class="text-danger" ng-show="validate.email">Vui lòng nhập email</span>
+                </div>
+                <div class="form-group my-3">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-control" name="password" id="password" ng-model="data.password">
+                    <span class="text-danger" ng-show="validate.password">Vui lòng nhập tên mật khẩu</span>
+                </div>
+                <div class="form-group my-3">
+                    <button class="btn btn-primary w-100" ng-click="register()">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js.map"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular/angular.min.js.map"></script>
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("myController", ($scope, $http) => {
+        var api = "http://localhost:3000/customers";
+        $scope.data = {
+            name: '',
+            email: '',
+            password: '',
+
+        }
+        $scope.register = function () {
+            if (validator()) {
+                $http.post(`${api}`, $scope.data)
+                    .then((response) => {
+                        window.location.href = "login.html";
+                    }).catch((error) => {
+                        console.log("Lỗi")
+                    })
+            }
+        }
+
+
+        $scope.validate = {
+            name: false,
+            email: false,
+            password: false,
+            login: false
+        }
+        function validator() {
+            $scope.data.name == "" ? $scope.validate.name = true : $scope.validate.name = false;
+            $scope.data.email == "" ? $scope.validate.email = true : $scope.validate.email = false;
+            $scope.data.password == "" ? $scope.validate.password = true : $scope.validate.password = false;
+            if ($scope.validate.name == false && $scope.validate.email == false && $scope.validate.password == false) {
+                return true;
+            }
+            return false;
+        }
+    })
+</script>
+
+</html>

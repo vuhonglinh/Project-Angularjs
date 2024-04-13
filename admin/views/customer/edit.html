@@ -1,0 +1,45 @@
+<div class="col px-5">
+    <h1 class="text-center">Cập nhật khách hàng</h1>
+    <div class="col-12">
+        <div class="form-group my-2">
+            <label for="name" class="form-label">Tên khách hàng</label>
+            <input class="form-control" value="{data.name}" value="{data.name}" type="text" name="name" id="name" ng-model="data.name">
+            <span class="text-danger" ng-show="validate.name">Không được để trống</span>
+        </div>
+        <div class="d-flex p-5 justify-content-between">
+            <div class="form-group col-3">
+                <label for="image">Ảnh khách hàng</label>
+                <input class="form-control" value="{data.image}" type="text" name="image" id="image" ng-model="data.image">
+                <span class="text-danger" ng-show="validate.image">Không được để trống</span>
+            </div>
+            <div class="form-group col-4">
+                <img src="" alt="" id="previewImage" style="max-width: 100%; max-height: 200px;">
+            </div>
+        </div>
+        <div class="form-group" class="form-label my-2">
+            <label for="email">Email</label>
+            <input class="form-control" value="{data.email}" type="email" name="email" id="email" ng-model="data.email">
+            <span class="text-danger" ng-show="validate.email">Không được để trống</span>
+        </div>
+        <div class="form-group" class="form-label my-2">
+            <label for="password">Mật khẩu</label>
+            <input class="form-control"  type="password" name="password" id="password" ng-model="data.password">
+            <span class="text-danger" ng-show="validate.password">Không được để trống</span>
+        </div>
+        <div class="form-group" class="form-label my-2">
+            <label for="phone">Số điện thoại</label>
+            <input class="form-control" value="{data.phone}" type="number" min="0" name="phone" id="phone" ng-model="data.phone">
+            <span class="text-danger" ng-show="validate.phone">Không được để trống</span>
+        </div>
+        <div class="form-group" class="form-label my-2">
+            <label for="address">Địa chỉ khách hàng</label>
+            <textarea class="form-control" name="address" id="address" cols="30" rows="10"
+                ng-model="data.address">{data.address}</textarea>
+            <span class="text-danger" ng-show="validate.address">Không được để trống</span>
+        </div>
+        <div class="form-group my-3">
+            <button class="btn btn-primary mr-2" ng-click="edit()">Cập nhật</button>
+            <a href="#!/customer/list" class="btn btn-warning">Quay lại</a>
+        </div>
+    </div>
+</div>

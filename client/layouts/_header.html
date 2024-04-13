@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md" id="navbar">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#" id="logo"><img src="/lib/images/logo.png" alt="" width="30px"
+            style="margin-bottom: 10px; margin-right: 10px;">Autosmart</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span><img src="lib/images/menu.png" alt="" width="20px"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#!/home">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/product">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/post">Tin tức</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/about">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/contact">Liên hệ</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="icons" style="gap: 10px;">
+        <a href="" class="text-decoration-none text-white"><img src="/lib/images/user.png" alt=""
+                width="20px">{{infoCustomer}}</a>
+        <a href="#!/cart"><img src="/lib/images/shopping-cart (3).png" alt="" width="20px"><span
+                class="text-danger" id="count-cart">({{cartItems.length}})</span></a>
+        <button class="btn btn-info" ng-click="logout()">Đăng xuất</button>
+    </div>
+</nav>

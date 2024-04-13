@@ -1,0 +1,32 @@
+<div class="row px-2">
+    <div class="alert alert-success text-center" ng-show="Success">
+        <span ng-show="addSuccess">Thêm thành công</span>
+        <span ng-show="deleteSuccess">Xóa thành công</span>
+        <span ng-show="editSuccess">Sửa thành công</span>
+    </div>
+    <div class="col-12">
+        <h1 class="text-center">Danh sách bài viết</h1>
+        <a href="#!/post/add" class="btn btn-primary my-3">Thêm mới bài viết</a>
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Ảnh bài viết</th>
+                    <th>Tiêu đề bài viết</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index, value) in listPosts" id="item-post-{{value.id}}">
+                    <td>{{ index + 1 }}</td>
+                    <td><img style="width: 50px;" src="{{ value.image }}" alt=""></td>
+                    <td>{{ value.title }}</td>
+                    <td>
+                        <a href="#!/post/edit/{{value.id}}" class="btn btn-warning">Sửa</a>
+                        <button class="btn btn-danger" ng-click="delete(value.id)">Xoá</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,167 @@
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+            <div class="card card-registration card-registration-2">
+                <div class="card-body p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-8">
+                            <div class="p-5">
+                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                    <h1 class="fw-bold mb-0 text-black">Giỏ hàng</h1>
+                                    <h6 class="mb-0 text-muted">{{ cartItems.length }} sản phẩm</h6>
+                                </div>
+                                <hr class="my-4">
+
+                                <div ng-repeat="(index,value) in cartItems"
+                                    class="row mb-4 py-2 d-flex justify-content-between align-items-center border-1 border-bottom">
+                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                        <img src="{{value.image}}" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <h6 class="text-black mb-0">{{value.name}}</h6>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <span>X {{value.quantity}}</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 d-flex">
+                                        <h6 class="mb-0">{{value.price | number:0}} VNĐ</h6>
+                                    </div>
+                                    <a ng-click="removeItem(value.id)" class="btn btn-danger m-3">Xóa</a>
+                                </div>
+                                <button ng-click="clearCart()" class="btn btn-sm btn-danger"
+                                    style="position: absolute; bottom: 10px; left: 5px;" href="">Xóa toàn bộ</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 bg-grey">
+                            <div class="p-5">
+                                <h3 class="fw-bold mb-5 mt-2 pt-1">Chi tiết đơn hàng</h3>
+                                <hr class="my-4">
+
+                                <div class="d-flex justify-content-between mb-4">
+                                    <h5 class="text-uppercase">{{ cartItems.length }} sản phẩm</h5>
+                                    <h5>{{getTotalAmount() | number:0}} VNĐ</h5>
+                                </div>
+
+                                <h5 class="text-uppercase mb-3">Vận chuyển</h5>
+
+                                <div class="mb-4 pb-2">
+                                    <select class="select">
+                                        <option value="1">Chuyển phát nhanh</option>
+                                        <option value="2">Giao hàng tiết kiệm</option>
+                                        <option value="3">Express</option>
+                                        <option value="4">VietPost</option>
+                                    </select>
+                                </div>
+
+                                <h5 class="text-uppercase mb-3">Mã khuyễn mãi</h5>
+
+                                <div class="mb-5">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Examplea2">nhập mã của bạn</label>
+                                    </div>
+                                </div>
+
+                                <hr class="my-4">
+
+                                <div class="d-flex justify-content-between mb-5">
+                                    <h5 class="text-uppercase">Tổng tiền</h5>
+                                    <h5>{{getTotalAmount() | number:0}} VNĐ</h5>
+                                </div>
+
+                                <a href="#!/home" data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-danger btn-block btn-lg" data-mdb-ripple-color="dark">Trở về trang
+                                    chủ</a>
+
+                                <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Thanh
+                                    toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-8 col-xl-5">
+                        <div class="">
+                            <div class="card-body">
+                                <div class="text-center mb-4">
+                                    <h3>Thanh toán</h3>
+                                    <h6>Payment</h6>
+                                </div>
+                                <form action="">
+                                    <div class="d-flex flex-row align-items-center mb-4 pb-1">
+                                        <img class="img-fluid"
+                                            src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+                                        <div class="flex-fill mx-3">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input type="text" id="formControlLgXc"
+                                                    class="form-control form-control-lg" value="**** **** **** 3193" />
+                                                <label class="form-label" for="formControlLgXc">Mã thẻ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+
+                                        <label class="form-label" for="formControlLgXs">Số tiền thanh toán</label>
+                                        <input type="text" id="formControlLgXs" class="form-control form-control-lg"
+                                            value="{{getTotalAmount() | number:0}} VNĐ" />
+                                    </div>
+
+                                    <p class="fw-bold mb-4">Thôn tin thẻ:</p>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="formControlLgXsd" class="form-control form-control-lg"
+                                            value="Anna Doe" />
+                                        <label class="form-label" for="formControlLgXsd">Tên chủ thẻ</label>
+                                    </div>
+
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="formControlLgXM">Số thẻ bí mật</label>
+                                            <input type="text" id="formControlLgXM" class="form-control form-control-lg"
+                                                value="1234 5678 1234 5678" />
+                                        </div>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="formControlLgExpk">Ngày hêt hạn</label>
+                                            <input type="password" id="formControlLgExpk"
+                                                class="form-control form-control-lg" placeholder="MM/YYYY" />
+                                        </div>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <label class="form-label" for="formControlLgcvv">Cvv</label>
+                                            <input type="password" id="formControlLgcvv"
+                                                class="form-control form-control-lg" placeholder="Cvv" />
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-success btn-lg form-control">Thanh toán</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

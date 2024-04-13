@@ -1,0 +1,42 @@
+<section class="py-3 py-md-5 py-xl-8" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h3 class="fs-5 mb-2 text-secondary text-uppercase">Tin tức</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" ng-repeat="(index,value) in listPosts">
+                <div class="card">
+                    <img src="{{value.image}}" class="card-img-top" alt="" style="width: 634px; height: 422px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{value.title}}</h5>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-{{value.id}}">
+                            Xem chi tiết
+                        </button>
+                    </div>
+                    <div class="modal fade" id="exampleModal-{{value.id}}" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{value.title}}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body  overflow-y-scroll" style="height: 400px;">
+                                    <img src="{{value.image}}" class="card-img-top" alt="">
+                                    <p>{{value.content}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
